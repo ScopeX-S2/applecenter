@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;800&family=Quicksand:wght@300;500;700&family=Roboto:wght@500&display=swap');
+
+:root {
+    --padding-global: 10%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+    text-decoration: none;
+
+    font-weight: 400;
+    color: #1d1d1d;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f5f7;
+    margin-top: 75px;
+}
+
+button.primary {
+    background: #445c42;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.5em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #212d20;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+button.primary .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #597856;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+footer {
+    width: 100%;
+
+    background: #1d1d1d;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer .main_FOOTER .contact *,
+footer .main_FOOTER .social_media *,
+footer .copy,
+footer .main_FOOTER .suporte h3,
+footer .main_FOOTER .suporte #form .center form input,
+footer textarea {
+    color: white;
+}
+
+footer div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_FOOTER {
+    height: 570px;
+    padding: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.copy {
+    width: 100%;
+    padding: 10px 20px;
+    background: #000;
+}
+
+.main_FOOTER h3 {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.main_FOOTER ul li a {
+    font-weight: 100;
+}
+
+.main_FOOTER ul li i {
+    font-size: 1.7em;
+    margin-right: 10px;
+    color: #f5f5f772;
+}
+
+.main_FOOTER ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.nome_SERVICE {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    font-size: 27px;
+    text-align: center;
+    margin: 13px;
+}
+
+.nome_SERVICE::before {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    width: 50px;
+    height: 1px;
+    background: #445c42;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: auto;
+}
+
+.product .card {
+    width: 400px;
+    height: 500px;
+    margin: 15px;
+    box-shadow: 0px 0px 2px 2px rgba(100, 100, 100, 0.075);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.product .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+}
+
+.product .circle {
+    padding: 0 4px;
+}
+
+.product .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.product .red {
+    background-color: #ff605c;
+}
+
+.product .yellow {
+    background-color: #ffbd44;
+}
+
+.product .green {
+    background-color: #00ca4e;
+}
+
+.product .image {
+    box-shadow: 0px 0px 5px 2px rgba(153, 153, 153, 0.021);
+    margin: auto;
+    width: 330px;
+    height: 330px;
+    background: URL(https://d2r9epyceweg5n.cloudfront.net/stores/001/575/363/products/apple-magsafe-charger-award1-3b13a05217f4b5ff1c16656783617115-1024-1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 10px;
+}
+
+.overflow_NAV {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+
+    padding: 0px 25px;
+}
+
+.overflow_NAV button {
+    padding: 20px;
+    background: #59785680;
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    border: 0;
+}
+
+.overflow_NAV button i {
+    font-size: 1.4em;
+}
+
+.info {
+    padding: 20px;
+    height: calc(100% - 380px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info strong {
+    width: 330px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu {
+    display: none;
+    padding: 10px;
+    
+    border: 0;
+    font-size: 1.7em;
+    background: 0;
+}
+
+.info_APPLECENTER {
+    display: flex;
+    flex-direction: row;
+}
+
+.suporte {
+    width: 40%;
+}
+
+.wpp a {
+    width: auto;
+
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+
+    display: flex;
+    align-items: center;
+}
+
+.wpp img {
+    width: 60px;
+    height: 60px;
+    margin-left: 25px;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        position: fixed;
+        right: -100%;
+        top: 100%;
+
+        width: 60%;
+        height: calc(100vh - 65px);
+
+
+        background: #161717f0;
+        transition: 250ms;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+    
+    .info_APPLECENTER {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 638px) {
+    .main_FOOTER h3 {
+        font-size: 1em;
+    }
+
+    .main_FOOTER ul li i {
+        font-size: 1.3em;
+    }
+
+    .main_FOOTER ul li a {
+        font-size: 0.8em;
+    }
+
+    .IMAGE_products {
+        display: none;
+    }
+}
+
+@media (max-width: 1190px) {
+    .main_FOOTER {
+        height: auto;
+        padding: 45px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .suporte {
+        width: 100%;
+    }
+}
