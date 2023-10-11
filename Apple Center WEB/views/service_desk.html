@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="PT" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple center - Consulta médica para seu celular</title>
+    <link rel="stylesheet" href="CSS/form_service.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body oncontextmenu="return false;">
+    <header>
+
+        <div class="brand">
+            <a href="/"><i class='bx bxl-apple' style='color:#ffffff'></i></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/#service">Serviços</a></li>
+                <li><a href="/#about">Sobre nós</a></li>
+                <li><a href="/#suporte">Suporte</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu"><i class='bx bx-menu-alt-right'></i></button>
+    </header>
+
+    <div class="container">
+        <h1>Desktop/Notebook</h1>
+        <div class="progress-bar">
+            <div class="step">
+                <p>
+                    Nome
+                </p>
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>
+                    Ajuda
+                </p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>
+                    Descrição
+                </p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+        <div class="form-outer">
+            <form id="messageForm" autocomplete="off">
+                <div class="page slide-page">
+                    <div class="title">
+                        Olá, tudo bem?
+                    </div>
+                    <div class="px768_FLEX">
+                        <div class="field">
+                            <div class="label">
+                                Nome:
+                            </div>
+                            <input type="text" name="Nome" id="name" required>
+                        </div>
+                        <div class="field">
+                            <div class="label">
+                                Número:
+                            </div>
+                            <input type="text" id="number" name="phone" onkeypress="mask(this, mphone);"
+                                onblur="mask(this, mphone);" />
+
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="label" name="email" required>
+                            E-mail
+                        </div>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="field First">
+
+                        <button class="button firstNext next">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+
+
+                            <div class="text">
+                                Next
+                            </div>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="title">
+                        Como posso ajudar?
+                    </div>
+                    <div class="field">
+                        <div class="label">
+                            Marca:
+                        </div>
+                        <input type="text" name="Marca" id="marca">
+                        <ul class="listMarca" id="listMarca"></ul>
+                    </div>
+                    <div class="px768_FLEX">
+                        <div class="field">
+                            <div class="label">
+                                Desktop/Notebook:
+                            </div>
+                            <input type="text" name="Dispositivo" id="input" class="dispositivo" value="">
+                            <ul class="list" id="list"></ul>
+                        </div>
+
+                        <div class="field">
+                            <div class="label">
+                                Ano:
+                            </div>
+                            <input type="text" name="ano" id="ano" class="ano" value="" placeholder="Ex: 2011">
+                        </div>
+                    </div>
+
+                    <div class="field btns">
+                        <button class="button prev-1 prev">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+
+
+                            <div class="text">
+                                Back
+                            </div>
+
+                        </button>
+
+                        <button class="button next-1 next">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+
+
+                            <div class="text">
+                                Next
+                            </div>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="title">
+                        Descreva:
+                    </div>
+                    <div class="field">
+                        <textarea name="Message" id="message"
+                            placeholder="Exemplo: Olá, traseira do meu celular quebrou..." name="message"></textarea>
+                    </div>
+                    <div class="field btns">
+                        <button class="button prev-3 prev">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+
+
+                            <div class="text">
+                                Back
+                            </div>
+
+                        </button>
+
+                        <button class="button submit" type="submit" onclick="submitLoad()">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+
+
+                            <div class="text">
+                                Enviar
+                            </div>
+
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <a id="whatsappLink" href="#" style="display: none;">Enviar para o WhatsApp</a>
+        </div>
+    </div>
+
+    <div class="loadingBG">
+        <svg viewBox="25 25 50 50">
+            <circle r="20" cy="50" cx="50"></circle>
+        </svg>
+    </div>
+
+
+    <footer>
+        <div class="main_FOOTER">
+            <div class="info_APPLECENTER">
+                <div class="contact">
+                    <h3>Entre em contato</h3>
+                    <ul>
+                        <li><i class='bx bxl-whatsapp'></i><a href="">(98)99234-3067</a></li>
+                        <li><i class='bx bx-phone'></i><a href="">(98)99234-3067</a></li>
+                        <li><i class='bx bx-envelope'></i><a href="">applecenter@gmail.com</a></li>
+                        <li><i class='bx bx-location-plus'></i><a href="">Av Principal Do Cohajap, N. 10 Loja C</a></li>
+                    </ul>
+                </div>
+                <div class="social_media">
+                    <h3>Permaneça conectado</h3>
+                    <ul>
+                        <li><i class='bx bxl-instagram'></i><a
+                                href="https://www.instagram.com/applecenter_oficial/">@applecenter_oficial</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="suporte" id="suporte">
+                <h3>Suporte <span onclick="formAp()"><i class='bx bx-minus' style='color:#ffffff'></i></span></h3>
+                <div id="form">
+                    <div class="center">
+                        <form class="form" action="https://formsubmit.co/davialves.xy@gmail.com" method="POST">
+                            <input type="email" placeholder="Seu email" class="input" name="E-Mail">
+                            <input type="text" placeholder="Seu nome" class="input" name="Nome">
+                            <textarea placeholder="Sua mensagem" name="Mensagem"></textarea>
+
+                            <a href="">
+                                <button class="primary"> Enviar
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </a>
+                            <input type="hidden" name="_next" id="next">
+                            <input type="hidden" name="_captcha" value="false">
+                        </form>
+                        <script>
+                            var next = document.querySelector('#next').value = window.location.href + "thankyou";
+                            var formI = document.querySelector('#suporte h3 span i');
+                            var form = document.getElementById('form');
+
+                            function formAp() {
+                                if (formI.classList == "bx bx-minus") {
+                                    formI.classList = "bx bx-plus"
+                                } else {
+                                    formI.classList = "bx bx-minus"
+                                }
+
+                                if (form.style.display == "none") {
+                                    form.style.display = "flex"
+                                } else {
+                                    form.style.display = "none"
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="copy">
+            Copyright Apple Center - 2023. Todos os direitos reservados.
+        </div>
+    </footer>
+    <script>
+
+        let names = [
+            "MacBook Air",
+            "MacBook Pro 13",
+            "MacBook Pro 16",
+            "MacBook",
+            "MacBook Pro (M1, 13-inch)",
+            "MacBook Pro (M1, 16-inch)",
+            "MacBook Pro (Intel, 13-inch)",
+            "MacBook Pro (Intel, 16-inch)",
+
+            /* Dell */
+
+            "XPS 13",
+            "XPS 15",
+            "Inspiron 14",
+            "Inspiron 15",
+            "Inspiron 17",
+            "Latitude 14",
+            "Latitude 15",
+            "Vostro 14",
+            "Vostro 15",
+            "Precision 5550",
+            "Precision 7550",
+            "Precision 7750",
+            "Alienware m15",
+            "Alienware m17",
+            "G3 15",
+            "G5 15",
+            "G7 17",
+            "XPS 17",
+            "Inspiron 13 2-in-1",
+            "Latitude 13 2-in-1",
+            "Vostro 13",
+            "Precision 5540",
+            "Alienware Area-51m",
+            "Alienware m17 R4",
+            "G15",
+
+            /* Samsung */
+
+            "Galaxy Book S",
+            "Galaxy Book Flex",
+            "Galaxy Book Ion",
+            "Galaxy Book Pro",
+            "Galaxy Book Pro 360",
+            "Notebook 7 Spin",
+            "Notebook 9",
+            "Notebook Flash",
+            "Notebook Odyssey",
+            "Notebook Plus",
+            "Notebook 5",
+            "Notebook 7",
+            "Notebook 9 Pen",
+            "Notebook 9 Pro",
+            "Notebook 9 Spin",
+            "Ativ Book 9",
+            "Ativ Book 9 Plus",
+            "Ativ Book 9 Lite",
+            "Ativ Book 9 Spin",
+            "Ativ Book 9 Pro",
+            "Ativ Book 9 Style",
+            "Ativ Book 9 Plus",
+            "Ativ Book 9 Pro",
+            "Ativ Book 9 Lite",
+            "Ativ Book 9 Spin",
+            "Ativ Book 9 Style",
+            "Ativ Book 9 Plus",
+            "Ativ Book 9 Pro",
+            "Ativ Book 9 Lite",
+            "Ativ Book 9 Spin",
+            "Ativ Book 9 Style",
+
+            "m15",
+            "m17",
+            "Area-51m",
+            "13",
+            "15",
+            "17",
+            "13 R2",
+            "15 R2",
+            "17 R3",
+            "13 R3",
+            "15 R3",
+            "17 R4",
+            "13 R4",
+            "15 R4",
+            "17 R5",
+            "m15 R2",
+            "m17 R2",
+            "Area-51m R2",
+            "13 R5",
+            "15 R5",
+            "17 R6",
+            "m15 R3",
+            "m17 R3",
+            "Area-51m R3",
+
+            /* Asus */
+
+            "ZenBook 13",
+            "ZenBook 14",
+            "ZenBook 15",
+            "ZenBook S",
+            "VivoBook 14",
+            "VivoBook 15",
+            "VivoBook S",
+            "ROG Zephyrus G14",
+            "ROG Zephyrus G15",
+            "ROG Zephyrus M15",
+            "ROG Zephyrus S",
+            "ROG Strix G",
+            "ROG Strix Scar",
+            "ROG Strix Hero",
+            "TUF Gaming A15",
+            "TUF Gaming A17",
+            "TUF Gaming F15",
+            "TUF Gaming F17",
+            "ProArt StudioBook",
+            "Chromebook C434",
+            "Chromebook Flip",
+            "ExpertBook",
+            "Transformer Book",
+            "ROG Flow X13",
+            "ROG Flow Z13",
+            "ROG Mothership",
+            "ROG G14",
+            "ROG G15",
+            "ROG G17",
+
+            /* HP */
+
+            "Spectre x360",
+            "Envy 13",
+            "Envy x360",
+            "Pavilion 14",
+            "Pavilion x360",
+            "Omen 15",
+            "Omen 17",
+            "ProBook 450",
+            "ProBook 640",
+            "EliteBook 840",
+            "EliteBook x360",
+            "ZBook Studio",
+            "ZBook Fury",
+            "Stream 11",
+            "Chromebook 14",
+            "Chromebook x360",
+            "ProBook x360",
+            "Elite Dragonfly",
+            "Elite Dragonfly Max",
+            "EliteBook 830",
+            "EliteBook 850",
+            "EliteBook 1040",
+            "Omen X",
+            "Pavilion Gaming",
+            "Spectre Folio",
+            "Spectre x2",
+            "ZBook Power",
+            "ZBook Create",
+            "ZBook Firefly",
+            "ZBook Force",
+            "Chromebook 11",
+            "Chromebook 13",
+
+            /* Lenovo */
+
+            "ThinkPad X1 Carbon",
+            "ThinkPad X1 Yoga",
+            "ThinkPad X1 Fold",
+            "ThinkPad T14s",
+            "ThinkPad T14",
+            "ThinkPad T15",
+            "ThinkPad L14",
+            "ThinkPad L15",
+            "ThinkBook 13s",
+            "ThinkBook 14",
+            "ThinkBook 15",
+            "IdeaPad 3",
+            "IdeaPad 5",
+            "IdeaPad Flex 5",
+            "Yoga Slim 7",
+            "Yoga 9i",
+            "Legion 5",
+            "Legion 7",
+            "Chromebook Duet",
+            "Chromebook Flex 5",
+            "ThinkPad E14",
+            "ThinkPad E15",
+            "ThinkPad P14s",
+            "ThinkPad P15s",
+            "Lenovo Legion Y540",
+            "Legion Y740",
+            "Flex 14",
+            "Flex 5G",
+            "IdeaPad Gaming 3",
+            "IdeaPad Gaming 5",
+            "IdeaPad Slim 7",
+            "Yoga C740",
+            "Yoga C940",
+            "Yoga 7i",
+            "Yoga 9i",
+            "ThinkBook Plus",
+            "ThinkPad L13",
+            "ThinkPad X13",
+            "ThinkPad X13 Yoga",
+            "ThinkPad T13",
+            "ThinkPad T13s",
+            "IdeaPad Duet 3",
+            "IdeaPad Slim 1",
+            "IdeaPad Flex 3",
+
+            /* Acer */
+
+            "Aspire 5",
+            "Aspire 7",
+            "Swift 3",
+            "Swift 5",
+            "Swift 7",
+            "Predator Helios 300",
+            "Predator Triton 300",
+            "Predator Helios 700",
+            "Predator Triton 500",
+            "Nitro 5",
+            "Nitro 7",
+            "Chromebook 14",
+            "Chromebook Spin 13",
+            "Chromebook 15",
+            "Chromebook Spin 15",
+            "TravelMate P6",
+            "TravelMate X5",
+            "ConceptD 7",
+            "ConceptD 9",
+            "ConceptD 3",
+            "Spin 3",
+            "Spin 5",
+            "Spin 7",
+            "Aspire 3",
+            "Aspire 1",
+            "Swift 1",
+            "Swift 3X",
+            "Predator Helios 500",
+            "Predator Triton 900",
+            "Nitro 9",
+            "Chromebook 13",
+            "TravelMate P2",
+            "ConceptD 5",
+            "Spin 1",
+            "Aspire 9",
+            "Swift 9",
+            "Predator Helios 1000",
+            "Nitro 3",
+            "Chromebook 11",
+            "TravelMate X3",
+            "Spin 2",
+            "ConceptD 4",
+            "Aspire 6",
+
+
+
+        ];
+
+        let marcas = [
+            "Apple",
+            "Acer",
+            "Asus",
+            "Lenovo",
+            "Samsung",
+            "HP",
+            "Dell",
+            "Positivo"
+        ];
+
+        let sortedNamesMarca = marcas.sort();
+
+        //reference
+        let marca = document.getElementById("marca");
+        const paiMarca = document.querySelector("#listMarca");
+
+        //Execute function on keyup
+        marca.addEventListener("keyup", (e) => {
+
+            //loop through above array
+            //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+            removeElementsMarca();
+            for (let i of sortedNamesMarca) {
+                if (marca.value == "") {
+                    paiMarca.style.display = "none";
+                } else {
+                    paiMarca.style.display = "block"
+                }
+                //convert input to lowercase and compare with each string
+
+                if (
+                    i.toLowerCase().startsWith(marca.value.toLowerCase()) &&
+                    marca.value != ""
+                ) {
+                    //create li element
+                    let listItem = document.createElement("li");
+                    //One common class name
+                    listItem.classList.add("list-itemsMarca");
+                    listItem.style.cursor = "pointer";
+                    listItem.setAttribute("onclick", "displayNamesMarca('" + i + "')");
+                    //Display matched part in bold
+                    let word = "<b>" + i.substr(0, marca.value.length) + "</b>";
+                    word += i.substr(marca.value.length);
+                    //display the value in array
+                    listItem.innerHTML = word;
+                    document.querySelector(".listMarca").appendChild(listItem);
+                }
+            }
+        });
+
+        function displayNamesMarca(value) {
+            paiMarca.style.display = "none"
+            marca.value = value;
+            removeElementsMarca();
+        }
+
+        function removeElementsMarca() {
+            //clear all the item
+            let itemsMarca = document.querySelectorAll(".list-itemsMarca");
+            itemsMarca.forEach((item) => {
+                item.remove();
+            });
+        }
+
+    </script>
+    <script src="JS/scripts.js"></script>
+    <script src="JS/global.js"></script>
+</body>
+
+</html>
